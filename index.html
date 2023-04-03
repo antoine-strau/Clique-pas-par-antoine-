@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0,user-scalable=no">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="" integrity="" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <title>CLIQUE PAS</title>
+</head>
+<body>
+    <div class="container">
+    <h3 align="center"> Créé par Antoine.</h3>
+    <h4 align="center">J'avais dit quoi ?</h4>
+    <p align ="center">Tu as de la chance si tu est sur pc</p>
+    <div class="btn" onclick="vibrate()">Clique pas</div>
+  </div>
+</body>
+<script>
+  let cont = document.querySelector(".container");
+  let btn = document.querySelector(".btn");
+  btn.addEventListener('click',event =>{
+  setInterval(vibrate, 100);
+  })
+  function vibrate(){
+       navigator.vibrate(100000);
+       cont.classList.add('hilao'); 
+       cont.style.backgroundImage = "url('https://www.peintures1825.fr/wp-content/uploads/2018/04/1998_1-1.jpg')"
+  }
+</script>
+</html>
